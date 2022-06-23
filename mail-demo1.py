@@ -7,19 +7,23 @@ from email.message import EmailMessage
 EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
 EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
 
-new_file_name = "Andy's Resume"
+#could not figure out a way to rename
+new_file_name = "___ Resume"
 
-contacts = ["judgejudybooty123@gmail.com"]
+#desired emails to send to
+contacts = ["desired emails to send to@gmail.com"]
 
 msg = EmailMessage()
 msg['Subject'] = 'Student seeking Software Engineering Roles'
 msg['From'] = EMAIL_ADDRESS
 msg['To'] = contacts #change to --> contacts if you want to send to contacts, or as ", ".join(contacts) or to a specific email
 
-msg.set_content("Hi, my name is Andy. I'm currently a student but I'm planning on taking a gap year. I believe I'd be a perfect fit for your company as a young and passionate software engineer as an intern or \
-for avaliable fulltime positions as well. Attached below is my resume, it also holds my GitHub and LinkedIn information. Thank you.\n\nBest,\nAndy")
+#desired msg to send to contacts
 
-files = ["recurse\current_resumee.pdf"]
+msg.set_content("Hi, my name is  Thank you.\n\nBest,\n ")
+
+# the path of the resume folder so folder/resume
+files = ["folder\resume.pdf"]
 
 for file in files:
 
